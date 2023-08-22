@@ -7,6 +7,10 @@ a{
   width: fit-content;
 }
 
+.wordbreak{
+  word-break: break-all;
+}
+
 .reveal {
   transition: all 0.65s cubic-bezier(0.52, 0.01, 0.16, 1), color 0.25s cubic-bezier(0.52, 0.01, 0.16, 1);
   animation: reveal .5s cubic-bezier(0.52, 0.01, 0.16, 1);

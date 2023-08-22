@@ -16,7 +16,7 @@ export default async function ViewManga({part} : {part: string}){
     {
       Children.toArray(
       (data.link).split(",").map((e: string) => (
-        <a href={e}>{e}</a>
+        <a className="wordbreak" href={e}>{e}</a>
       ))
       )
     }

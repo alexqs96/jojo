@@ -41,10 +41,10 @@ export default function RootLayout({
             </Link>
           </nav>
         </header>
-        <main className='flex'>
+        <main className='flex flex-wrap gap-10'>
         {children}
         <Image
-          className='ml-auto mt-auto object-contain'
+          className='sm:ml-auto sm:mt-auto max-sm:mx-auto object-contain'
           src="/img/bg_kamen_black.png"
           width={200}
           height={400}
