@@ -10,6 +10,7 @@ export default async function Home() {
 
   return (
     <>
+    <p>{data?.message}</p>
     <Suspense fallback={<p>Cargando Animes...</p>}>
       <Seasons />
     </Suspense>
