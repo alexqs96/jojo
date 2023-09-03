@@ -1,5 +1,6 @@
 import { getSheets } from "@/lib/sheets"
 import { MangaType } from "@/lib/types"
+import Image from "next/image"
 import { Children } from "react"
 
 export default async function ViewManga({part} : {part: string}){
@@ -13,6 +14,17 @@ export default async function ViewManga({part} : {part: string}){
 
   return (
     <div className="flex flex-col reveal">
+    <Image
+      className="object-contain"
+      src={"/manga/"+data.slug+".png"}
+      width={200}
+      height={400}
+      alt="Portada"
+      unoptimized
+      priority
+    />
+    <p>{data?.title}</p>
+    <p>{data?.info}</p>
     {
       Children.toArray(
       (data.link).split(",").map((e: string) => (

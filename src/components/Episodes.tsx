@@ -13,12 +13,15 @@ export default async function Episodes({season} : {season: string}){
       data.length?
       Children.toArray(
         data.map((e) => (
+          e.episode && e.link && e.season?
           <a
             className="hover:font-medium"
-            href={(e.link).replace("com/v/", "com/e/")}
+            href={e.link ? (e.link).replace("com/v/", "com/e/") : ""}
           >
-            Episode {e.episode}
+            Episodio {e?.episode}
           </a>
+          :
+          null
         ))
       )
       :
